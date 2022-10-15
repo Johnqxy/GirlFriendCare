@@ -27,6 +27,8 @@ def BarkPush(info, type):  # CoolPush酷推
         api = "https://api.day.app/jczfKrq4ofQmkHmc6R7ZYm/小钱跟你说:生日快乐！我的宝贝~/" + info+'?sound=birdsong'
     if type == 2:
         api = "https://api.day.app/jczfKrq4ofQmkHmc6R7ZYm/小钱跟你说:今天别忘了祝他生日快乐/" + info+'?sound=birdsong'
+    if type == 3:
+        api = "https://api.day.app/jczfKrq4ofQmkHmc6R7ZYm/" + info + '?sound=birdsong'
     requests.post(api)
 
 
@@ -42,9 +44,10 @@ def get_info():
 def main():
     d1 = datetime.datetime(2022, 8, 16)
     try:
+        BarkPush("如果收到这条消息，请给小钱留言",3)
         while (True):
             time_struct = time.localtime()
-            if (time_struct.tm_hour == 13 and time_struct.tm_min == 35 and time_struct.tm_sec == 30):
+            if (time_struct.tm_hour == 13 and time_struct.tm_min == 47 and time_struct.tm_sec == 0):
                 print(time_struct)
                 d2 = datetime.datetime(time_struct.tm_year, time_struct.tm_mon, time_struct.tm_mday)
                 interval = d2 - d1
