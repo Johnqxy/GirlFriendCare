@@ -52,7 +52,7 @@ def main():
     BarkPush("测试消息", 4)
     while True:
         time_struct = time.localtime()
-        if time_struct.tm_hour == 8 and time_struct.tm_min == 42 and time_struct.tm_sec == 0:
+        if time_struct.tm_hour == 8 and time_struct.tm_min == 46 and time_struct.tm_sec == 0:
             BarkPush("定时测试", 4)
             time.sleep(1)
         if time_struct.tm_hour == 7 and time_struct.tm_min == 30 and time_struct.tm_sec == 0:
