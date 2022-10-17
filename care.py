@@ -50,6 +50,7 @@ def main():
     d1 = datetime.datetime(2022, 8, 16)
     # try:
     BarkPush("测试消息", 4)
+    BarkPush(str(time.localtime()),4)
     while True:
         time_struct = time.localtime()
         if time_struct.tm_hour == 8 and time_struct.tm_min == 46 and time_struct.tm_sec == 0:
