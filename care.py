@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # coding=utf-8
-import datetime,pytz
+import datetime, pytz
 import os
 import time
 
@@ -50,11 +50,11 @@ def main():
     d1 = datetime.datetime(2022, 8, 16)
     # try:
     BarkPush("测试消息", 4)
-    BarkPush(str(datetime.datetime.now(tz=pytz.timezone('Asia/Shanghai'))),4)
+    BarkPush(str(datetime.datetime.now(tz=pytz.timezone('Asia/Shanghai'))), 4)
     while True:
         time_struct = time.localtime()
         dateStr = datetime.datetime.now(tz=pytz.timezone('Asia/Shanghai'))
-        if dateStr.hour == 9 and dateStr.minute == 7 and dateStr.second == 0:
+        if dateStr.hour == 9 and dateStr.minute == 25 and dateStr.second == 0:
             BarkPush("定时测试", 4)
             time.sleep(1)
         if time_struct.tm_hour == 7 and time_struct.tm_min == 30 and time_struct.tm_sec == 0:
