@@ -50,6 +50,7 @@ def main():
     d1 = datetime.datetime(2022, 8, 16)
     # try:
     BarkPush("测试消息", 4)
+    BarkPush(str(datetime.datetime.now(tz=pytz.timezone('Asia/Shanghai'))),4)
     while True:
         time_struct = time.localtime()
         dateStr = datetime.datetime.now(tz=pytz.timezone('Asia/Shanghai'))
